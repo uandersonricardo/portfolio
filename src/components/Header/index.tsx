@@ -7,7 +7,7 @@ const Header = () => {
   const { theme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50 flex flex-wrap items-center bg-white px-4 py-5 sm:px-6 lg:px-8 dark:bg-black dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-black/75">
+    <header className="container mx-auto sticky top-0 z-50 flex flex-wrap items-center bg-white px-4 py-5 sm:px-6 lg:px-8 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:bg-black dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-black/75">
       <nav className="flex relative z-50 justify-between w-full">
         <Image
           height={60}

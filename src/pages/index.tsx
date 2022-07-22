@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         <title>Uanderson Ricardo | Desenvolvedor Fullstack</title>
       </Head>
       <Header />
+      <Hero />
     </>
   );
 };
