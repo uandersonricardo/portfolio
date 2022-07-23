@@ -1,4 +1,5 @@
 import Head from "next/head";
+import AboutMe from "../components/AboutMe";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 
@@ -10,6 +11,7 @@ const Home = () => {
       </Head>
       <Header />
       <Hero />
+      <AboutMe />
     </>
   );
 };
