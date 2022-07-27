@@ -18,7 +18,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="pt">
+      <Html lang="pt" className="scroll-smooth">
         <Head>
           <meta charSet="utf-8" />
           <link
