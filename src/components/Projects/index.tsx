@@ -1,8 +1,12 @@
+import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 
 const Projects = () => {
   return (
-    <section className="py-16" id="projects">
+    <section
+      className="border-b border-gray-100 dark:border-gray-900 py-20"
+      id="projects"
+    >
       <div className="container mx-auto flex flex-col px-4 sm:px-6 lg:px-8 items-center">
         <h1 className="text-4xl font-bold text-center w-full mb-12">
           Projetos
@@ -134,14 +138,16 @@ const Projects = () => {
               </p>
             </div>
           </div>
-          <div className="rounded-3xl bg-gray-50">
-            <div className="w-full h-full flex flex-col items-center justify-center rounded-xl p-3 mb-4 text-7xl text-gray-700">
-              <BsGithub />
-              <h2 className="text-2xl font-bold text-gray-700 mt-4">
-                Mais no github
-              </h2>
-            </div>
-          </div>
+          <Link href="https://github.com/uandersonricardo">
+            <a className="rounded-3xl bg-gray-50" target="_blank">
+              <div className="w-full h-full flex flex-col items-center justify-center rounded-xl p-3 mb-4 text-7xl text-gray-700">
+                <BsGithub />
+                <h2 className="text-2xl font-bold text-gray-700 mt-4">
+                  Mais no github
+                </h2>
+              </div>
+            </a>
+          </Link>
         </div>
       </div>
     </section>

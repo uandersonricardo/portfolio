@@ -1,5 +1,6 @@
 import Head from "next/head";
 import AboutMe from "../components/AboutMe";
+import AreasOfInterest from "../components/AreasOfInterest";
 import EducationAndExperience from "../components/EducationAndExperience";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -16,6 +17,7 @@ const Home = () => {
       <AboutMe />
       <Projects />
       <EducationAndExperience />
+      <AreasOfInterest />
     </>
   );
 };
