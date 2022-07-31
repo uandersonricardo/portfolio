@@ -5,10 +5,12 @@ const Hero = () => {
   const { theme } = useTheme();
 
   return (
-    <main className="container mx-auto flex flex-row px-4 sm:px-6 lg:px-8">
+    <main className="container mx-auto w-full overflow-hidden flex flex-row px-4 sm:px-6 lg:px-8">
       <div className="flex-1 flex flex-col items-start">
-        <h1 className="text-6xl font-bold mt-32 mb-6">Opa, tudo bom? 👋</h1>
-        <h2 className="text-3xl text-gray-600 dark:text-gray-500 mb-6">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mt-10 md:mt-18 lg:mt-24 xl:mt-32 mb-6">
+          Opa, tudo bom? 👋
+        </h1>
+        <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-600 dark:text-gray-500 mb-6">
           Me chamo Uanderson Ricardo. Sou desenvolvedor fullstack, técnico em
           eletrônica, entusiasta de machine learning e metido a designer
         </h2>
@@ -18,7 +20,7 @@ const Hero = () => {
           </a>
         </Link>
       </div>
-      <div className="flex-1 flex flex-row items-center justify-center h-full">
+      <div className="flex-1 flex flex-row items-center justify-center h-full self-end">
         <img
           src={theme === "dark" ? "/art-dark.svg" : "/art.svg"}
           alt="Arte de Uanderson Ricardo"

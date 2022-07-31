@@ -21,6 +21,15 @@ module.exports = {
           900: "#171923",
         },
       },
+      keyframes: {
+        blink: {
+          "from, to": { borderRightWidth: "1px" },
+          "50%": { borderRightWidth: "0px" },
+        },
+      },
+      animation: {
+        blink: "blink 1.2s step-end infinite",
+      },
     },
   },
   plugins: [],

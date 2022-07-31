@@ -10,8 +10,11 @@ import { SiGmail } from "react-icons/si";
 
 const Contact = () => {
   return (
-    <footer className="bg-gray-900 dark:bg-gray-800 pt-20 pb-8" id="contact">
-      <div className="container mx-auto flex flex-col px-4 sm:px-6 lg:px-8 items-center justify-center">
+    <footer
+      className="bg-gray-900 dark:bg-gray-800 pt-20 pb-8 w-full"
+      id="contact"
+    >
+      <div className="container mx-auto overflow-hidden flex flex-col px-4 sm:px-6 lg:px-8 items-center justify-center">
         <div className="flex items-center justify-center py-24 mb-20">
           <Link href="https://github.com/uandersonricardo">
             <a

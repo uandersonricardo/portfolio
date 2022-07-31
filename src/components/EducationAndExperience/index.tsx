@@ -3,10 +3,10 @@ import { BiBook, BiLaptop } from "react-icons/bi";
 const EducationAndExperience = () => {
   return (
     <section
-      className="border-b border-gray-100 dark:border-gray-900 py-20"
+      className="border-b border-gray-100 dark:border-gray-900 py-20 w-full"
       id="experience"
     >
-      <div className="container mx-auto flex flex-col px-4 sm:px-6 lg:px-8 items-center">
+      <div className="container mx-auto overflow-hidden flex flex-col px-4 sm:px-6 lg:px-8 items-center">
         <h1 className="text-4xl font-bold text-center w-full mb-12">
           Educação e Experiência
         </h1>

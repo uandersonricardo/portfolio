@@ -9,6 +9,10 @@
   @apply visible z-50;
 }
 
+.caret-blink {
+  @apply animate-blink border-white;
+}
+
 @tailwind utilities;
 
 @layer base {
