@@ -1,7 +1,7 @@
 import { Output } from "../types";
 
 interface Command {
-  run(args?: string[]): Output;
+  run(args?: string[]): Promise<Output>;
   help(): string;
 }
 

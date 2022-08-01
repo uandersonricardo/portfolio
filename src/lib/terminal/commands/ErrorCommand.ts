@@ -2,7 +2,7 @@ import Command from "./Command";
 import { Output } from "../types";
 
 class ErrorCommand implements Command {
-  run(): Output {
+  async run(): Promise<Output> {
     const text = 'Comando não encontrado. Digite "help" para obter ajuda.';
 
     return { type: "response", value: text };

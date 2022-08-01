@@ -2,7 +2,7 @@ import Command from "./Command";
 import { Output } from "../types";
 
 class InfoCommand implements Command {
-  run(): Output {
+  async run(): Promise<Output> {
     const info = `Nome: Uanderson Ricardo
 Pronomes: Ele, Dele
 Local: Recife, Pernambuco

@@ -2,7 +2,7 @@ import Command from "./Command";
 import { Output } from "../types";
 
 class EchoCommand implements Command {
-  run(args?: string[]): Output {
+  async run(args?: string[]): Promise<Output> {
     if (!args || args.length === 0) {
       return { type: "response", value: "" };
     }

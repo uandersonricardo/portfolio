@@ -5,10 +5,10 @@ export const commandToHTML = (command: string): string => {
   return command.replace(/ /g, "\xA0") || "\u200B";
 };
 
-export const runCommand = (commandWithArgs: string): Output => {
+export const runCommand = async (commandWithArgs: string): Promise<Output> => {
   const [command, ...args] = commandWithArgs.match(/\S+/g);
   const commandFactory = new CommandFactory();
   const commandInstance = commandFactory.getCommand(command);
 
-  return commandInstance.run(args);
+  return await commandInstance.run(args);
 };

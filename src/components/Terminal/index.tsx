@@ -1,20 +1,49 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useTheme } from "next-themes";
+import { useEffect, useRef, useState } from "react";
 import SimpleBar from "simplebar-react";
 import { HistoryCommand } from "../../lib/terminal/types";
 import { commandToHTML, runCommand } from "../../utils/terminal";
 
 const Terminal = () => {
+  const { theme, setTheme } = useTheme();
   const inputRef = useRef<HTMLInputElement>();
   const scrollableRef = useRef<HTMLElement>();
   const [command, setCommand] = useState<string>("");
   const [history, setHistory] = useState<HistoryCommand[]>([]);
   const [isTyping, setIsTyping] = useState<boolean>(false);
 
-  const sendToTerminal = useCallback((text: string) => {
+  const handleTerminalAction = (action: string) => {
+    if (action === "clear") {
+      setHistory([]);
+      return;
+    }
+
+    if (action === "theme") {
+      setHistory((history) => [
+        ...history,
+        {
+          type: "output",
+          text:
+            (theme === "dark"
+              ? "O site está configurado no modo escuro."
+              : "O site está configurado no modo claro.") + "\n\n",
+        },
+      ]);
+      return;
+    }
+
+    if (action.startsWith("theme:")) {
+      const theme = action.split(":")[1];
+      setTheme(theme);
+      return;
+    }
+  };
+
+  const sendToTerminal = async (text: string) => {
     setHistory((history) => [...history, { type: "command", text }]);
 
     if (text.length > 0) {
-      const output = runCommand(text);
+      const output = await runCommand(text);
 
       if (output.type === "response") {
         setHistory((history) => [
@@ -27,16 +56,6 @@ const Terminal = () => {
     }
 
     setCommand("");
-  }, []);
-
-  const handleTerminalAction = (action: string) => {
-    switch (action) {
-      case "clear":
-        setHistory([]);
-        break;
-      default:
-        break;
-    }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -71,7 +90,7 @@ const Terminal = () => {
 
   useEffect(() => {
     sendToTerminal("info");
-  }, [sendToTerminal]);
+  }, []);
 
   return (
     <div className="relative overflow-hidden shadow-xl max-w-full w-[108ch] flex bg-gray-800 h-auto max-h-auto] sm:max-h-[none] sm:rounded-xl lg:h-auto xl:h-auto dark:bg-gray-900">

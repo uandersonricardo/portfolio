@@ -3,7 +3,7 @@ import { Output } from "../types";
 import CommandFactory from "../CommandFactory";
 
 class HelpCommand implements Command {
-  run(args?: string[]): Output {
+  async run(args?: string[]): Promise<Output> {
     if (args.length > 0) {
       const command = args[0];
       const commandFactory = new CommandFactory();
@@ -14,13 +14,20 @@ class HelpCommand implements Command {
     }
 
     const text = `Para obter mais informações sobre um comando específico,
-digite "help <comando>"
+digite "help <comando>".
 
 Comandos disponíveis:
-  help          Exibe este texto
+  clear         Limpa o terminal
+  contact       Exibe informações de contato
   echo          Exibe o texto que você digitar
-  clear         Limpa a tela
-  info          Exibe informações sobre mim`;
+  education     Exibe informações sobre a minha formação
+  help          Exibe o guia de ajuda
+  http          Realiza uma requisição HTTP
+  info          Exibe informações sobre mim
+  interests     Exibe informações sobre minhas áreas de interesses
+  jobs          Exibe informações sobre os meus trabalhos
+  projects      Exibe informações sobre meus projetos
+  theme         Exibe informações e altera o tema do site`;
 
     return { type: "response", value: text };
   }

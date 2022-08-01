@@ -2,7 +2,7 @@ import Command from "./Command";
 import { Output } from "../types";
 
 class ClearCommand implements Command {
-  run(): Output {
+  async run(): Promise<Output> {
     return { type: "action", value: "clear" };
   }
 
