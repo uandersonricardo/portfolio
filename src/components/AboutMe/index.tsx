@@ -2,13 +2,15 @@ import Terminal from "../Terminal";
 
 const AboutMe = () => {
   return (
-    <section className="bg-gray-900 dark:bg-gray-800 py-20 w-full" id="about">
-      <div className="container mx-auto overflow-hidden flex flex-col px-4 sm:px-6 lg:px-8 items-center">
-        <h1 className="text-4xl text-white font-bold text-center w-full mb-12">
-          Sobre mim
-        </h1>
-        <Terminal />
-      </div>
+    <section
+      className="pt-24 pb-12 w-full container mx-auto overflow-hidden flex flex-col px-4 sm:px-6 lg:px-8 items-center"
+      id="about"
+    >
+      <h2 className="text-5xl font-bold text-center w-full mb-4">Sobre mim</h2>
+      <h3 className="text-2xl text-center text-gray-500 w-full mb-20">
+        Use o terminal abaixo para conhecer um pouco mais sobre mim
+      </h3>
+      <Terminal />
     </section>
   );
 };

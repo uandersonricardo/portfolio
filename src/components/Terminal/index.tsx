@@ -93,17 +93,17 @@ const Terminal = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden shadow-xl max-w-full w-[108ch] flex bg-gray-800 h-auto max-h-auto] sm:max-h-[none] sm:rounded-xl lg:h-auto xl:h-auto dark:bg-gray-900">
+    <div className="relative overflow-hidden shadow-xl bg-black border border-gray-600 max-w-full w-[108ch] flex h-auto max-h-auto sm:max-h-[none] sm:rounded-xl lg:h-auto xl:h-auto">
       <div className="relative w-full flex flex-col">
-        <div className="flex-none border-b border-gray-500/30">
-          <div className="flex items-center h-8 space-x-1.5 px-3">
-            <div className="w-2.5 h-2.5 bg-gray-600 rounded-full"></div>
-            <div className="w-2.5 h-2.5 bg-gray-600 rounded-full"></div>
-            <div className="w-2.5 h-2.5 bg-gray-600 rounded-full"></div>
+        <div className="flex-none border-b border-gray-600">
+          <div className="flex items-center h-8 space-x-2 px-3">
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
           </div>
         </div>
         <div
-          className="relative min-h-0 h-[25em] flex-auto flex flex-col"
+          className="relative min-h-0 h-[30em] flex-auto flex flex-col"
           onClick={handleClick}
         >
           <input
@@ -115,9 +115,10 @@ const Terminal = () => {
             onChange={handleChange}
             className="w-0 h-0 opacity-0"
           />
-          <code className="flex-auto relative block pt-4 pb-4 px-4 overflow-hidden text-white">
+          <code className="flex-auto relative block overflow-hidden text-white">
             <SimpleBar
-              className="max-h-full"
+              className="max-h-full p-4"
+              autoHide={false}
               scrollableNodeProps={{ ref: scrollableRef }}
             >
               {history.map((line, index) => (

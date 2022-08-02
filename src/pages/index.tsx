@@ -14,11 +14,13 @@ const Home = () => {
         <title>Uanderson Ricardo | Desenvolvedor Fullstack</title>
       </Head>
       <Header />
-      <Hero />
-      <AboutMe />
-      <Projects />
-      <EducationAndExperience />
-      <AreasOfInterest />
+      <main>
+        <Hero />
+        <AboutMe />
+        <Projects />
+        <EducationAndExperience />
+        <AreasOfInterest />
+      </main>
       <Contact />
     </>
   );

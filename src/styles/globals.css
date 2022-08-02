@@ -13,6 +13,10 @@
   @apply animate-blink border-white;
 }
 
+.simplebar-scrollbar::before {
+  @apply bg-white;
+}
+
 @tailwind utilities;
 
 @layer base {

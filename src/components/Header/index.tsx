@@ -1,5 +1,4 @@
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import Link from "next/link";
 import ThemeToggle from "../ThemeToggle";
 
@@ -7,14 +6,13 @@ const Header = () => {
   const { theme } = useTheme();
 
   return (
-    <header className="w-full sticky top-0 z-50 flex flex-wrap items-center bg-white backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:bg-black dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-black/75">
-      <nav className="container mx-auto px-4 py-5 sm:px-6 lg:px-8 flex relative z-50 justify-between">
+    <header className="w-full absolute h-24 top-0 z-50 flex flex-wrap items-center bg-white backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75 dark:bg-black dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-black/75">
+      <nav className="container mx-auto px-4 py-4 sm:px-6 lg:px-8 flex relative z-50 justify-between">
         <Link href="/">
           <a>
-            <Image
-              height={60}
-              width={60}
+            <img
               src={theme === "dark" ? "/logo-dark.svg" : "/logo.svg"}
+              className="h-16 w-16"
               alt="Uanderson Ricardo"
             />
           </a>
