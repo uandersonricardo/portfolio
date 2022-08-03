@@ -8,7 +8,7 @@ const Projects = () => {
       id="projects"
     >
       <h2 className="text-5xl font-bold text-center w-full mb-4">Projetos</h2>
-      <h3 className="text-2xl text-center text-gray-500 w-full mb-20">
+      <h3 className="text-2xl text-center text-gray-500 dark:text-neutral-500 w-full mb-20">
         Veja alguns dos projetos que eu tenho desenvolvido
       </h3>
       <div className="grid grid-flow-col grid-rows-3 grid-cols-3 gap-8 w-full">
@@ -51,7 +51,7 @@ const Projects = () => {
             />
           </div>
         </div>
-        <div className="p-8 rounded-3xl bg-[#000000]">
+        <div className="p-8 rounded-3xl bg-[#0a0a0a]">
           <div className="w-20 h-20 bg-black/10 flex items-center justify-center rounded-xl p-3 mb-4">
             <img
               src="/assets/dinoio/logo.svg"

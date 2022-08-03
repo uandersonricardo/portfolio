@@ -7,13 +7,13 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="w-full pt-24 overflow-hidden flex flex-row container mx-auto px-4 sm:px-6 lg:px-8 h-screen"
+      className="w-full pt-24 overflow-hidden flex flex-col lg:flex-row container mx-auto px-4 sm:px-6 lg:px-8 h-screen"
     >
       <div className="flex-1 flex flex-col items-start py-12">
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold md:mt-6 lg:mt-12 xl:mt-24 mb-6">
           Opa, tudo bom? 👋
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-gray-500 dark:text-gray-600 mb-8">
+        <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-gray-500 dark:text-neutral-500 mb-8">
           Me chamo Uanderson Ricardo. Sou desenvolvedor fullstack, técnico em
           eletrônica, entusiasta de machine learning e metido a designer
         </p>

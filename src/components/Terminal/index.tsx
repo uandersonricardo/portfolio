@@ -93,9 +93,9 @@ const Terminal = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden shadow-xl bg-black border border-gray-600 max-w-full w-[108ch] flex h-auto max-h-auto sm:max-h-[none] sm:rounded-xl lg:h-auto xl:h-auto">
+    <div className="relative overflow-hidden shadow-xl bg-black border border-gray-600 dark:border-neutral-600 max-w-full w-[108ch] flex h-auto max-h-auto sm:max-h-[none] sm:rounded-xl lg:h-auto xl:h-auto">
       <div className="relative w-full flex flex-col">
-        <div className="flex-none border-b border-gray-600">
+        <div className="flex-none border-b border-gray-600 dark:border-neutral-600">
           <div className="flex items-center h-8 space-x-2 px-3">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>

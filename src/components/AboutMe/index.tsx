@@ -7,7 +7,7 @@ const AboutMe = () => {
       id="about"
     >
       <h2 className="text-5xl font-bold text-center w-full mb-4">Sobre mim</h2>
-      <h3 className="text-2xl text-center text-gray-500 w-full mb-20">
+      <h3 className="text-2xl text-center text-gray-500 dark:text-neutral-500 w-full mb-20">
         Use o terminal abaixo para conhecer um pouco mais sobre mim
       </h3>
       <Terminal />
