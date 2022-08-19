@@ -17,7 +17,7 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className="focus:outline-none"
+      className="focus:outline-none p-2"
       onClick={() => setTheme(isDark() ? "light" : "dark")}
       aria-label="Theme toggle"
     >

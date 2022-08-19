@@ -70,8 +70,6 @@ class HttpCommand implements Command {
       validateStatus: () => true,
     });
 
-    console.log(response);
-
     const http = `Status:
   ${response.status} ${response.statusText}
 

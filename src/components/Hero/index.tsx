@@ -18,7 +18,7 @@ const Hero = () => {
           eletrônica, entusiasta de machine learning e metido a designer
         </p>
         <Link href="/#about">
-          <a className="group inline-flex items-center justify-center rounded-xl py-3 px-6 text-lg transition font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 border-2 bg-black text-white border-black hover:bg-white hover:text-black hover:border-black active:bg-gray-100 active:text-black focus-visible:outline-black dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white dark:hover:border-white dark:active:bg-gray-800 dark:active:text-white dark:focus-visible:outline-white">
+          <a className="group inline-flex items-center justify-center rounded-lg md:rounded-xl py-2 md:py-3 px-4 md:px-6 md:text-lg transition font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 border-2 bg-black text-white border-black hover:bg-white hover:text-black hover:border-black active:bg-gray-100 active:text-black focus-visible:outline-black dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white dark:hover:border-white dark:active:bg-gray-800 dark:active:text-white dark:focus-visible:outline-white">
             Saiba mais
           </a>
         </Link>
