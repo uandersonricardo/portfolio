@@ -17,7 +17,7 @@ const Header = () => {
             />
           </a>
         </Link>
-        <div className="hidden md:flex md:gap-x-8 px-8 items-center">
+        <div className="hidden lg:flex md:gap-x-8 px-8 items-center">
           <Link href="/#about">
             <a className="inline-block rounded-lg py-1 px-4 text-center text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-300 dark:hover:bg-neutral-900 dark:hover:text-neutral-100">
               Sobre mim

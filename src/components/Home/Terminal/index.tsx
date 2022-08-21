@@ -1,8 +1,8 @@
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 import SimpleBar from "simplebar-react";
-import { HistoryCommand } from "../../lib/terminal/types";
-import { commandToHTML, runCommand } from "../../utils/terminal";
+import { HistoryCommand } from "../../../lib/terminal/types";
+import { commandToHTML, runCommand } from "../../../utils/terminal";
 
 const Terminal = () => {
   const { theme, setTheme } = useTheme();

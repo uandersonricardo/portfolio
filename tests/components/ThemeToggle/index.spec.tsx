@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { ThemeProvider } from "next-themes";
 
-import ThemeToggle from "../../../src/components/ThemeToggle";
+import ThemeToggle from "../../../src/components/Layout/ThemeToggle";
 
 describe("ThemeToggle Component", () => {
   beforeAll(() => {
